@@ -1,0 +1,2406 @@
+body{
+    background-color: #121213;
+}
+
+@mixin flex($a: space-around, $b: center) {
+    display: flex;
+    justify-content: $a;
+    align-items: $b;
+    @content;
+}
+
+
+
+
+@keyframes ballBounce {
+    0% {
+        width: 167px;
+        filter: brightness(1);
+    }
+    15%{
+        width: 165px;
+        filter: brightness(.95);
+    }
+	30%{
+        width: 158px;
+        filter: brightness(.89);
+	}
+	50%{
+        width: 145px;
+        filter: brightness(.83);
+	}
+	70%{
+        width: 158px;
+        filter: brightness(.89);
+	}
+	85%{
+        width: 165px;
+        filter: brightness(.95);
+	}
+    100%{
+        width: 167px;
+        filter: brightness(1);
+    }
+}
+@keyframes ballBounce2 {
+    0% {
+        width: 137px;
+        filter: brightness(1);
+    }
+    15%{
+        width: 135px;
+        filter: brightness(.95);
+    }
+	30%{
+        width: 128px;
+        filter: brightness(.89);
+	}
+	50%{
+        width: 115px;
+        filter: brightness(.83);
+	}
+	70%{
+        width: 128px;
+        filter: brightness(.89);
+	}
+	85%{
+        width: 135px;
+        filter: brightness(.95);
+	}
+    100%{
+        width: 137px;
+        filter: brightness(1);
+    }
+}
+
+@keyframes ballBounce3 {
+    0% {
+        width: 107px;
+        filter: brightness(1);
+    }
+    15%{
+        width: 105px;
+        filter: brightness(.95);
+    }
+    30%{
+        width: 98px;
+        filter: brightness(.89);
+    }
+    50%{
+        width: 85px;
+        filter: brightness(.83);
+    }
+    70%{
+        width: 98px;
+        filter: brightness(.89);
+    }
+    85%{
+        width: 105px;
+        filter: brightness(.95);
+    }
+    100%{
+        width: 107px;
+        filter: brightness(1);
+    }
+}
+
+
+
+@keyframes ballShadow {
+    0% {
+        top: 40px;
+        left: 90px;
+        width: 125px;
+        height: 125px;
+        background-color: rgba(65, 62, 62, .1);
+        filter: blur(10px);
+    }
+    15%{
+        // width: 165px;
+        top: 39px;
+        left: 89px;
+        width: 120px;
+        height: 120px;
+        background-color: rgba(65, 62, 62, .11);
+        filter: blur(9px);
+    }
+	30%{ 
+        top: 10px;
+        left: 50px;
+        width: 143px;
+        height: 143px;
+        background-color: rgba(65, 62, 62, .13);
+        filter: blur(7px);
+	}
+	50%{ 
+        top: -30px;
+        left: -60px;
+        width: 167px;
+        height: 167px;
+        background-color: rgba(65, 62, 62, .2);
+        filter: blur(6px);
+	}
+	70%{
+        top: 10px;
+        left: 50px;
+        width: 143px;
+        height: 143px;
+        background-color: rgba(65, 62, 62, .13);
+        filter: blur(7px);
+	}
+	85%{
+        top: 38px;
+        left: 88px;
+        width: 120px;
+        height: 120px;
+        background-color: rgba(65, 62, 62, .11);
+        filter: blur(9px);
+	}
+    100%{
+        top: 40px;
+        left: 90px;
+        width: 125px;
+        height: 125px;
+        background-color: rgba(65, 62, 62, .1);
+        filter: blur(10px);
+    }
+}
+@keyframes ballShadow2 {
+    0% {
+        top: 40px;
+        left: 90px;
+        width: 95px;
+        height: 95px;
+        background-color: rgba(65, 62, 62, .1);
+        filter: blur(10px);
+    }
+    15%{
+        // width: 165px;
+        top: 39px;
+        left: 89px;
+        width: 90px;
+        height: 90px;
+        background-color: rgba(65, 62, 62, .11);
+        filter: blur(9px);
+    }
+	30%{ 
+        top: 10px;
+        left: 50px;
+        width: 113px;
+        height: 113px;
+        background-color: rgba(65, 62, 62, .13);
+        filter: blur(7px);
+	}
+	50%{ 
+        top: -30px;
+        left: -60px;
+        width: 137px;
+        height: 137px;
+        background-color: rgba(65, 62, 62, .2);
+        filter: blur(6px);
+	}
+	70%{
+        top: 10px;
+        left: 50px;
+        width: 113px;
+        height: 113px;
+        background-color: rgba(65, 62, 62, .13);
+        filter: blur(7px);
+	}
+	85%{
+        top: 38px;
+        left: 88px;
+        width: 90px;
+        height: 90px;
+        background-color: rgba(65, 62, 62, .11);
+        filter: blur(9px);
+	}
+    100%{
+        top: 40px;
+        left: 90px;
+        width: 95px;
+        height: 95px;
+        background-color: rgba(65, 62, 62, .1);
+        filter: blur(10px);
+    }
+}
+@keyframes ballShadow3 {
+    0% {
+        top: 40px;
+        left: 90px;
+        width: 65px;
+        height: 65px;
+        background-color: rgba(65, 62, 62, .1);
+        filter: blur(10px);
+    }
+    15%{
+        // width: 165px;
+        top: 39px;
+        left: 89px;
+        width: 60px;
+        height: 60px;
+        background-color: rgba(65, 62, 62, .11);
+        filter: blur(9px);
+    }
+	30%{ 
+        top: 10px;
+        left: 50px;
+        width: 83px;
+        height: 83px;
+        background-color: rgba(65, 62, 62, .13);
+        filter: blur(7px);
+	}
+	50%{ 
+        top: -30px;
+        left: -60px;
+        width: 107px;
+        height: 107px;
+        background-color: rgba(65, 62, 62, .2);
+        filter: blur(6px);
+	}
+	70%{
+        top: 10px;
+        left: 50px;
+        width: 83px;
+        height: 83px;
+        background-color: rgba(65, 62, 62, .13);
+        filter: blur(7px);
+	}
+	85%{
+        top: 38px;
+        left: 88px;
+        width: 60px;
+        height: 60px;
+        background-color: rgba(65, 62, 62, .11);
+        filter: blur(9px);
+	}
+    100%{
+        top: 40px;
+        left: 90px;
+        width: 65px;
+        height: 65px;
+        background-color: rgba(65, 62, 62, .1);
+        filter: blur(10px);
+    }
+}
+@keyframes sin {
+    0% {
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(4deg);
+    }
+    20%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(5deg);
+    }
+    56%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes eyes {
+    0% {
+        background-image: url(../img/project/mych.png);
+    }
+    45%{
+        background-image: url(../img/project/mych1.png);
+    }
+    50%{
+        background-image: url(../img/project/mych2.png);
+    }
+    55%{
+        background-image: url(../img/project/mych1.png);
+    }
+    100%{
+        background-image: url(../img/project/mych.png);
+    }
+}
+@keyframes upDown {
+    0% {
+        transform: translateY(3px);
+    }
+    50%{
+        transform: translateY(-3px);
+    }
+    100%{
+        transform: translateY(3px);
+    }
+}
+@keyframes opa {
+    0% {
+        opacity: 1;
+    }
+    50%{
+        opacity: .4;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes head {
+    0% {
+        transform: translateX(0);
+    }
+    38%{
+        transform: translateX(0);
+    }
+    40%{
+        transform: translateX(-2px);
+    }
+    45%{
+        transform: translateX(2px);
+    }
+    50%{
+        transform: translateX(-4px);
+    }
+    55%{
+        transform: translateX(2px);
+    }
+    60%{
+        transform: translateX(-2px);
+    }
+    62%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes blurcan {
+    0% {
+        filter: blur(0);
+        scale: 1;
+    }
+    15%{
+        filter: blur(0);
+        scale: 1;
+    }
+    50%{
+        filter: blur(2px);
+        scale: 1.01;
+    }
+    85%{
+        filter: blur(0);
+        scale: 1;
+    }
+    100%{
+        filter: blur(0);
+        scale: 1;
+    }
+}
+
+
+@keyframes bs0 {
+    50% {
+        content: url("../img/project/logo1.png");
+    }
+}
+@keyframes bs1 {
+    50% {
+        content: url("../img/project/draw-btn1.png");
+    }
+}
+@keyframes bs2 {
+    50% {
+        content: url("../img/project/color-black1.png");
+    }
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
+    // width: 10px;
+
+}
+.noise{
+    z-index: -1;
+}
+
+#project{
+    user-select: none;
+    // transition: .3s;
+    // width: 320vw;
+    // // height: calc(100vh - 50px);
+    // height: 100vh;
+    // padding-left: 100px;
+    // @include flex(space-between){}
+    section{
+        // padding-top: 100px;
+        height: 100vh;
+        font-size: 100px;
+        text-align: center;
+        // padding: calc(2vw + 50px);
+        padding-bottom: 10px;
+        .top-wrap{
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            // background-color: rgba(255,255,255,.2);
+            @include flex(flex-start, flex-end){
+                flex-wrap: wrap;
+            }
+            .t-left{
+                width: 60%;
+                height: calc(100% - 120px);
+                // border: 1px solid #0ff;
+                position: relative;
+                [class^=t-left-wrap]{
+                    width: 100%;
+                    height: 100%;
+                    @include flex(center, flex-end){}
+                    &.t-left-wrap-copy{
+                        bottom: -100%;
+                        left: 0;
+                        position: absolute;
+                        transform: rotateX(180deg);
+                    }
+                    .card{
+                        position: relative;
+                        margin-bottom: 40px;
+                        width: 300px;
+                        height: 450px;
+                        border-radius: 8px;
+                        background-color: #fff;
+                        &::before{
+                            content: "";
+                            transition: 1s;
+                            position: absolute;
+                            width: 200px;
+                            height: 200px;
+                            left: -110px;
+                            top: 15%;
+                            border-radius: 50%;
+                            filter: blur(20px);
+                            z-index: -1;
+                            // background-color: rgba(100, 184, 86, .6);
+                        }
+                        
+                        &:hover:before{
+                            top: 13%;
+                            left: -130px;
+                            width: 250px;
+                            height: 250px;
+                            filter: blur(32px);
+                        }
+                        &:hover a{
+                            transition: .3s;
+                            transform: scale(1.2);
+                            box-shadow: 0 0 10px rgba(0,0,0,.6);
+                        }
+                        .card-wrap{
+                            width: 100%;
+                            height: 100%;
+                            padding: 110px 0 60px;
+                            @include flex(){
+                                flex-direction: column;
+                            }
+                            .blur-wrap{
+                                padding-top: 0;
+                                width: 100%;
+                                position: relative;
+                                @include flex(center, center){}
+                                .blur-one{
+                                    width: 120px;
+                                    height: 120px;
+                                    border-radius: 50%;
+                                    // background: linear-gradient(149deg, rgba(100,184,86,1) 40%, rgba(42,130,28,1) 100%);
+                                    filter: blur(4px);
+                                }
+                                h2{
+                                    z-index: 10;
+                                    position: absolute;
+                                    font-size: 32px;
+                                }
+                            }
+                            h4{
+                                z-index: 10;
+                                font-size: 20px;
+                                padding-top: 20px;
+                            }
+                            a{
+                                transition: .3s;
+                                z-index: 10;
+                                @include flex(center){}
+                                color: #fff;
+                                border-radius: 4px;
+                                padding: 7px;
+                                margin-bottom: 20px;
+                                font-size: 20px;
+                                // background: linear-gradient(149deg, rgba(100,184,86,1) 20%, rgba(42,130,28,1) 100%);
+                            }
+                        }
+                    }
+                }
+            }
+            .t-right{
+                @include flex(center, flex-start){
+                    flex-direction: column;
+                }
+                width: 40%;
+                height: calc(100% - 120px);
+                // height: 430px;
+                padding: 150px 0 0 80px;
+                .first-wrap{
+                    
+                    @include flex(flex-start, flex-start){
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                    }
+                    h1{
+                        font-size: 46px;
+                        color: #ddd;
+                    }
+                    h5{
+                        font-weight: 600;
+                        font-size: 22px;
+                        color: #C6C6C6;
+                        padding: 18px 0 16px;
+                    }
+                    p{
+                        font-weight: 300;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: rgb(173, 173, 173);
+                    }
+                }
+                .second-wrap{
+                    @include flex(flex-start, flex-start){
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                    }
+                    h6{
+                        padding: 12px 0 5px;
+                        font-weight: 300;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: rgb(223, 223, 223);
+                    }
+                    b{
+                        padding-top: 20px;
+                    }
+                    nav{
+                        width: 100%;
+                        height: auto;
+                        @include flex(center, flex-start){
+                            flex-direction: column;
+                        }
+                        span{
+                            color: #555;
+                            padding-bottom: 2px;
+                            font-size: 13px;
+                            &:first-child{
+                                font-size: 14px;
+                                color: #999;
+                            }
+                        }
+                    }
+                }
+                .pop-btn{
+                    width: 100%;
+                    padding: 20px 50px 0 0;
+                    @include flex(flex-start){}
+                    .val-btn{
+                        margin-right: 20px;
+                        padding: 10px 15px;
+                        border-radius: 4px;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .dark-box{
+                position: relative;
+                z-index: 150;
+                height: 120px;
+                // border: 1px solid #0ff;
+                background: linear-gradient(180deg, rgba(18, 18, 19, 0.6) 10%, rgba(18, 18, 19, 1) 92%);
+                width: 60%;
+            }
+        }
+
+
+
+
+        &#wis{
+            .top-wrap{
+                .t-left{
+                    [class^=t-left-wrap]{
+                        &.t-left-wrap-copy{
+                        }
+                        .card{
+                            
+                            &::before{
+                                background-color: rgba(100, 184, 86, .6);
+                            }
+                            &::after{
+                                content: "";
+                                bottom: 0;
+                                left: 0;
+                                background-size: cover;
+                                position: absolute;
+                                width: 100%;
+                                height: 160px;
+                                border-radius: 8px;
+                                background-image: url(../img/project/wisbg.png);
+                                
+                            }
+                            .pul{
+                                top: -60px;
+                                left: 0;
+                                position: absolute;
+                                width: calc(100% + 7px);
+                                // height: 200px;
+                            }
+                            .ball-shadow{
+                                position: absolute;
+
+                                animation: ballShadow 1s linear infinite;
+                                top: -30px;
+                                left: -50px;
+                                width: 100px;
+                                height: 100px;
+                                background-color: rgba(65, 62, 62, .6);
+                                filter: blur(6px);
+                                border-radius: 50%;
+                                z-index: 6;
+                            }
+                            .ball{
+                                top: -30px;
+                                left: -50px;
+                                z-index: 7;
+                                animation: ballBounce 1s linear infinite;
+                                position: absolute;
+                                width: 150px;
+                            }
+                            .sin{
+                                animation: sin 4s infinite;
+                                position: absolute;
+                                bottom: -80px;
+                                right: -160px;
+                                width: 350px;
+                                z-index: 10;
+                            }
+                            .wisline{
+                                position: absolute;
+                                width: 100%;
+                                top: 55%;
+                                left: 0;
+                                opacity: .5;
+                            }
+                            .card-wrap{
+                                .blur-wrap{
+                                    .blur-one{
+                                        background: linear-gradient(149deg, rgba(100,184,86,1) 40%, rgba(42,130,28,1) 100%);
+                                        filter: blur(4px);
+                                    }
+                                    h2{
+                                        color: #084D03;
+                                    }
+                                }
+                                h4{
+                                    color: #737C72;
+                                }
+                                a{
+                                    background: linear-gradient(149deg, rgba(100,184,86,1) 20%, rgba(42,130,28,1) 100%);
+                                }
+                            }
+                        }
+                    }
+                }
+                .t-right{
+                    h1{
+                    }
+                    h5{
+                    }
+                    p{
+                    }
+                    .pop-btn{
+                        width: 100%;
+                        padding: 20px 50px 0 0;
+                        @include flex(flex-start){}
+                        .val-btn{
+                            background: linear-gradient(149deg, rgba(100,184,86,1) 20%, rgba(42,130,28,1) 100%);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+        &#mymaple{
+            .top-wrap{
+                .t-left{
+                    [class^=t-left-wrap]{
+                        &.t-left-wrap-copy{
+                            .ch1{
+                                z-index: 10;
+                                position: absolute;
+                                animation: none;
+                                background-image: url(../img/project/mych.png);
+                                background-size: cover;
+                                width: 250px;
+                                height: 370px;
+                                right: -140px;
+                                bottom: -60px;
+                            }
+                        }
+                        .card{
+                            &::before{
+                                background-color: rgba(199, 136, 228, .6);
+                            }
+                            .ch1{
+                                z-index: 10;
+                                animation: eyes 4s step-start infinite;
+                                position: absolute;
+                                background-image: url(../img/project/mych.png);
+                                background-size: cover;
+                                width: 250px;
+                                height: 370px;
+                                right: -140px;
+                                bottom: -60px;
+                            }
+                            &::after{
+                                content: "";
+                                bottom: 0;
+                                left: 0;
+                                background-size: cover;
+                                position: absolute;
+                                width: 100%;
+                                height: 50px;
+                                border-radius: 0 0 8px 8px;
+                                background-image: url(../img/project/underbar.png);
+                                
+                            }
+                            .topbar{
+                                position: absolute;
+                                width: 100%;
+                                top: 0;
+                                left: 0;
+                                height: 35px;
+                                border-radius: 8px 8px 0 0;
+                                // background-size: cover;
+                            }
+                            .window{
+                                animation: upDown 3s step-start infinite;
+                                width: 350px;
+                                position: absolute;
+                                top: -75px;
+                                left: -150px;
+                                z-index: 10;
+                            }
+                            .card-wrap{
+                                .blur-wrap{
+                                    .blur-one{
+                                        background: linear-gradient(149deg, rgba(199, 136, 228,1) 40%, rgba(187, 84, 189,1) 100%);
+                                        filter: blur(4px);
+                                    }
+                                    h2{
+                                        color: #4F0C66;
+                                    }
+                                }
+                                h4{
+                                    color: #7B727C;
+                                }
+                                a{
+                                    background: linear-gradient(149deg, rgba(199, 136, 228,1) 20%, rgba(187, 84, 189,1) 100%);
+                                }
+                            }
+                        }
+                    }
+                }
+                .t-right{
+                    h1{
+                    }
+                    h5{
+                    }
+                    p{
+                    }
+                    .pop-btn{
+                        width: 100%;
+                        padding: 20px 50px 0 0;
+                        @include flex(flex-start){}
+                        .val-btn{
+                            background: linear-gradient(149deg, rgba(199, 136, 228,1) 20%, rgba(187, 84, 189,1) 100%);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+        &#cheflee{
+            .top-wrap{
+                .t-left{
+                    [class^=t-left-wrap]{
+                        &.t-left-wrap-copy{
+                        }
+                        .card{
+                            &:after{
+                                content: "";
+                                bottom: 0;
+                                left: 0;
+                                background-size: cover;
+                                position: absolute;
+                                width: 100%;
+                                height: 120px;
+                                border-radius: 8px;
+                                background-image: url(../img/project/vegimix.png);
+                            }
+                            &::before{
+                                background-color: rgba(155, 204, 74, .6);
+                            }
+                            .ve{
+                                animation: upDown 2.2s infinite;
+                                position: absolute;
+                                width: 350px;
+                                top: -80px;
+                                right: -150px;
+                            }
+                            .lime{
+                                animation: upDown 2.5s infinite;
+                                position: absolute;
+                                width: 480px;
+                                height: auto;
+                                bottom: -150px;
+                                left: -260px;
+                                z-index: 15;
+                            }
+                            .bubble{
+                                animation: opa 4s infinite;
+                                position: absolute;
+                                width: 230px;
+                                top: -10px;
+                                left: -73px;
+                                z-index: 15;
+                            }
+                            .card-wrap{
+                                position: absolute;
+                                .blur-wrap{
+                                    .blur-one{
+                                        background: linear-gradient(149deg, rgba(155, 204, 74,1) 40%, rgb(96, 141, 23) 100%);
+                                        filter: blur(4px);
+                                    }
+                                    h2{
+                                        color: #1B4A05;
+                                    }
+                                }
+                                h4{
+                                    color: #757C72;
+                                }
+                                a{
+                                    z-index: 16;
+                                    background: linear-gradient(149deg, rgba(155, 204, 74,1) 20%, rgba(96, 141, 23,1) 100%);
+                                }
+                            }
+                        }
+                    }
+                }
+                .t-right{
+                    h1{
+                    }
+                    h5{
+                    }
+                    p{
+                    }
+                    .pop-btn{
+                        width: 100%;
+                        padding: 20px 50px 0 0;
+                        @include flex(flex-start){}
+                        .val-btn{
+                            background: linear-gradient(149deg, rgba(155, 204, 74,1) 20%, rgba(96, 141, 23,1) 100%);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        &#bonescatch{
+            .top-wrap{
+                .t-left{
+                    [class^=t-left-wrap]{
+                        &.t-left-wrap-copy{
+                        }
+                        .card{
+                            .bs-logo{
+                                position: absolute;
+                                width: 125%;
+                                height: auto;
+                                top: -40px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                z-index: 8;
+                                animation: bs0 1.5s step-end infinite;
+                            }
+                            .draw-btn{
+                                position: absolute;
+                                width: 80%;
+                                height: auto;
+                                bottom: -70px;
+                                left: -30px;
+                                transform: translateX(-50%);
+                                z-index: 8;
+                                animation: bs1 1.4s step-end infinite;
+                            }
+                            .color-black{
+                                position: absolute;
+                                width: 100%;
+                                height: auto;
+                                bottom: -55px;
+                                right: -130px;
+                                z-index: 8;
+                                animation: bs2 1.6s step-end infinite;
+                            }
+                            &:after{
+                                content: "";
+                                top: 0;
+                                left: 0;
+                                background-size: cover;
+                                position: absolute;
+                                width: 100%;
+                                height: 70%;
+                                border-radius: 8px;
+                                background-image: url(../img/project/bscat.png);
+                            }
+                            &::before{
+                                background-color: rgba(112, 83, 44, 0.6);
+                            }
+                            .card-wrap{
+                                position: absolute;
+                                .blur-wrap{
+                                    .blur-one{
+                                        z-index: 8;
+                                        background: linear-gradient(149deg, rgb(90, 67, 40) 40%, rgb(182, 153, 121) 100%);
+                                        filter: blur(4px);
+                                    }
+                                    h2{
+                                        color: #281704;
+                                    }
+                                }
+                                h4{
+                                    color: #757C72;
+                                }
+                                a{
+                                    z-index: 16;
+                                    background: linear-gradient(149deg, rgba(149, 109, 63,1) 20%, rgba(98, 75, 49,1) 100%);
+                                }
+                            }
+                        }
+                    }
+                }
+                .t-right{
+                    h1{
+                    }
+                    h5{
+                    }
+                    p{
+                    }
+                    .pop-btn{
+                        width: 100%;
+                        padding: 20px 50px 0 0;
+                        @include flex(flex-start){}
+                        .val-btn{
+                            background: linear-gradient(149deg, rgba(149, 109, 63,1) 20%, rgba(98, 75, 49,1) 100%);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+        &#tahl04{
+            .top-wrap{
+                .t-left{
+                    [class^=t-left-wrap]{
+                        &.t-left-wrap-copy{
+                        }
+                        .card{
+                            &::before{
+                                background-color: rgba(94, 133, 235, .6);
+                            }
+                            .tahl-head{
+                                animation: head 2.5s infinite;
+                                position: absolute;
+                                width: 340px;
+                                height: auto;
+                                top: -80px;
+                                left: -175px;
+                                z-index: 15;
+                            }
+                            .tahl-text{
+                                position: absolute;
+                                width: 260px;
+                                height: auto;
+                                bottom: -50px;
+                                left: -110px;
+                                z-index: 15;
+                            }
+                            .can-img{
+                                animation: blurcan 2.8s infinite;
+                                position: absolute;
+                                width: 230px;
+                                height: auto;
+                                bottom: -40px;
+                                right: -120px;
+                                z-index: 15;
+                            }
+                            .card-wrap{
+                                .blur-wrap{
+                                    .blur-one{
+                                        background: linear-gradient(149deg, rgba(94, 133, 235, 1) 40%, rgba(41, 73, 157, 1) 100%);
+                                        filter: blur(4px);
+                                    }
+                                    h2{
+                                        color: #050D56;
+                                    }
+                                }
+                                h4{
+                                    color: #73727C;
+                                }
+                                a{
+                                    background: linear-gradient(149deg, rgba(94, 133, 235, 1) 20%, rgba(41, 73, 157, 1) 100%);
+                                }
+                            }
+                        }
+                    }
+                }
+                .t-right{
+                    h1{
+                    }
+                    h5{
+                    }
+                    p{
+                    }
+                    .pop-btn{
+                        width: 100%;
+                        padding: 20px 50px 0 0;
+                        @include flex(flex-start){}
+                        .val-btn{
+                            background: linear-gradient(149deg, rgba(94, 133, 235, 1) 20%, rgba(41, 73, 157, 1) 100%);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+    }
+    
+}
+
+
+//반응형
+
+
+
+@media screen and (max-width: 1023px) {
+
+    #project{
+        section{
+            .top-wrap{
+                .t-left{
+                    width: 60%;
+                    height: calc(100% - 100px);
+                    [class^=t-left-wrap]{
+                        .card{
+                            position: relative;
+                            margin-bottom: 40px;
+                            width: 250px;
+                            height: 400px;
+                            border-radius: 8px;
+                            &::before{
+                                content: "";
+                                width: 150px;
+                                height: 150px;
+                                left: -80px;
+                                top: 15%;
+                                border-radius: 50%;
+                                filter: blur(20px);
+                                z-index: -1;
+                                // background-color: rgba(100, 184, 86, .6);
+                            }
+                            
+                            &:hover:before{
+                                left: -80px;
+                                top: 15%;
+                                width: 200px;
+                                height: 200px;
+                                filter: blur(32px);
+                            }
+                            &:hover a{
+                                transition: .3s;
+                                transform: scale(1.2);
+                                box-shadow: 0 0 10px rgba(0,0,0,.6);
+                            }
+                            .card-wrap{
+                                width: 100%;
+                                height: 100%;
+                                padding: 80px 0 60px;
+                                @include flex(){
+                                    flex-direction: column;
+                                }
+                                .blur-wrap{
+                                    padding-top: 10px;
+                                    width: 100%;
+                                    position: relative;
+                                    @include flex(center, center){}
+                                    .blur-one{
+                                        width: 100px;
+                                        height: 100px;
+                                        border-radius: 50%;
+                                        // background: linear-gradient(149deg, rgba(100,184,86,1) 40%, rgba(42,130,28,1) 100%);
+                                        filter: blur(4px);
+                                    }
+                                    h2{
+                                        z-index: 10;
+                                        position: absolute;
+                                        font-size: 26px;
+                                    }
+                                }
+                                h4{
+                                    z-index: 10;
+                                    font-size: 16px;
+                                    padding-top: 10px;
+                                }
+                                a{
+                                    transition: .3s;
+                                    z-index: 10;
+                                    @include flex(center){}
+                                    color: #fff;
+                                    border-radius: 4px;
+                                    padding: 7px;
+                                    margin-bottom: 20px;
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .t-right{
+                    @include flex(center, flex-start){
+                        flex-direction: column;
+                    }
+                    width: 40%;
+                    height: calc(100% - 100px);
+                    // height: 430px;
+                    padding: 150px 0 0 80px;
+                    h1{
+                        font-size: 32px;
+                        color: #ddd;
+                    }
+                    h5{
+                        font-weight: 600;
+                        font-size: 20px;
+                        color: #C6C6C6;
+                        padding: 20px 0 18px;
+                    }
+                    p{
+                        font-weight: 300;
+                        font-size: 12px;
+                        line-height: 1.5;
+                        color: rgb(173, 173, 173);
+                    }
+                    h6{
+                        padding: 10px 0 5px;
+                        font-weight: 300;
+                        font-size: 12px;
+                        line-height: 1.5;
+                        color: rgb(223, 223, 223);
+                    }
+                    b{
+                        padding-top: 10px;
+                    }
+                    nav{
+                        width: 100%;
+                        height: auto;
+                        @include flex(center, flex-start){
+                            flex-direction: column;
+                        }
+                        span{
+                            color: #555;
+                            padding-bottom: 2px;
+                            font-size: 12px;
+                            &:first-child{
+                                font-size: 13px;
+                                color: #999;
+                            }
+                        }
+                    }
+                    .pop-btn{
+                        width: 100%;
+                        padding: 10px 0 0 0;
+                        @include flex(flex-start){}
+                        .val-btn{
+                            margin-right: 10px;
+                            padding: 8px 10px;
+                            border-radius: 4px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .dark-box{
+
+                    position: relative;
+                    z-index: 150;
+                    height: 100px;
+                    // border: 1px solid #0ff;
+                    background: linear-gradient(180deg, rgba(18, 18, 19, 0.6) 10%, rgba(18, 18, 19, 1) 92%);
+                    width: 60%;
+                }
+            }
+    
+    
+    
+    
+            &#wis{
+                .top-wrap{
+                    .t-left{
+                        [class^=t-left-wrap]{
+                            &.t-left-wrap-copy{
+                            }
+                            .card{
+                                
+                                &::before{
+                                    background-color: rgba(100, 184, 86, .6);
+                                }
+                                &::after{
+                                    content: "";
+                                    bottom: 0;
+                                    left: 0;
+                                    background-size: cover;
+                                    position: absolute;
+                                    width: 100%;
+                                    border-radius: 8px;
+                                    background-image: url(../img/project/wisbg.png);
+                                    
+                                }
+                                .pul{
+                                    top: -50px;
+                                    left: 0;
+                                    position: absolute;
+                                    width: calc(100% + 7px);
+                                    // height: 200px;
+                                }
+                                .ball-shadow{
+                                    position: absolute;
+                                    animation: ballShadow2 1s linear infinite;
+                                    top: -30px;
+                                    left: -50px;
+                                    width: 70px;
+                                    height: 70px;
+                                    background-color: rgba(65, 62, 62, .6);
+                                    filter: blur(6px);
+                                    border-radius: 50%;
+                                    z-index: 6;
+                                }
+                                .ball{
+                                    top: -30px;
+                                    left: -50px;
+                                    z-index: 7;
+                                    animation: ballBounce2 1s linear infinite;
+                                    position: absolute;
+                                    width: 100px;
+                                }
+                                .sin{
+                                    animation: sin 4s infinite;
+                                    position: absolute;
+                                    bottom: -70px;
+                                    right: -120px;
+                                    width: 280px;
+                                    z-index: 10;
+                                }
+                                .wisline{
+                                    position: absolute;
+                                    width: 100%;
+                                    top: 45%;
+                                    left: 0;
+                                    opacity: .5;
+                                }
+                                .card-wrap{
+                                    .blur-wrap{
+                                        .blur-one{
+                                            background: linear-gradient(149deg, rgba(100,184,86,1) 40%, rgba(42,130,28,1) 100%);
+                                            filter: blur(4px);
+                                        }
+                                        h2{
+                                            color: #084D03;
+                                        }
+                                    }
+                                    h4{
+                                        color: #737C72;
+                                    }
+                                    a{
+                                        background: linear-gradient(149deg, rgba(100,184,86,1) 20%, rgba(42,130,28,1) 100%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .t-right{
+                        h1{
+                        }
+                        h5{
+                        }
+                        p{
+                        }
+                        .pop-btn{
+                            width: 100%;
+                            padding: 15px 50px 0 0;
+                            @include flex(flex-start){}
+                            .val-btn{
+                                background: linear-gradient(149deg, rgba(100,184,86,1) 20%, rgba(42,130,28,1) 100%);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+    
+    
+    
+    
+            &#mymaple{
+                .top-wrap{
+                    .t-left{
+                        [class^=t-left-wrap]{
+                            &.t-left-wrap-copy{
+                                .ch1{
+                                    z-index: 10;
+                                    position: absolute;
+                                    background-image: url(../img/project/mych.png);
+                                    background-size: cover;
+                                    animation:none;
+                                    width: 180px;
+                                    height: 250px;
+                                    right: -100px;
+                                    bottom: -40px;
+                                }
+                            }
+                            .card{
+                                &::before{
+                                    background-color: rgba(199, 136, 228, .6);
+                                }
+                                .ch1{
+                                    z-index: 10;
+                                    animation: eyes 4s step-start infinite;
+                                    position: absolute;
+                                    background-image: url(../img/project/mych.png);
+                                    background-size: cover;
+                                    width: 180px;
+                                    height: 250px;
+                                    right: -100px;
+                                    bottom: -40px;
+                                }
+                                &::after{
+                                    content: "";
+                                    bottom: 0;
+                                    left: 0;
+                                    background-size: cover;
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 50px;
+                                    border-radius: 0 0 8px 8px;
+                                    background-image: url(../img/project/underbar.png);
+                                    
+                                }
+                                .topbar{
+                                    position: absolute;
+                                    width: 100%;
+                                    top: 0;
+                                    left: 0;
+                                    height: 28px;
+                                    border-radius: 8px 8px 0 0;
+                                    // background-size: cover;
+                                }
+                                .window{
+                                    animation: upDown 3s step-start infinite;
+                                    width: 280px;
+                                    position: absolute;
+                                    top: -65px;
+                                    left: -80px;
+                                    z-index: 10;
+                                }
+                                .card-wrap{
+                                    .blur-wrap{
+                                        .blur-one{
+                                            background: linear-gradient(149deg, rgba(199, 136, 228,1) 40%, rgba(187, 84, 189,1) 100%);
+                                            filter: blur(4px);
+                                        }
+                                        h2{
+                                            color: #4F0C66;
+                                        }
+                                    }
+                                    h4{
+                                        color: #7B727C;
+                                    }
+                                    a{
+                                        background: linear-gradient(149deg, rgba(199, 136, 228,1) 20%, rgba(187, 84, 189,1) 100%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .t-right{
+                        h1{
+                        }
+                        h5{
+                        }
+                        p{
+                        }
+                        .pop-btn{
+                            width: 100%;
+                            padding: 15px 50px 0 0;
+                            @include flex(flex-start){}
+                            .val-btn{
+                                background: linear-gradient(149deg, rgba(199, 136, 228,1) 20%, rgba(187, 84, 189,1) 100%);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+    
+    
+    
+    
+            &#cheflee{
+                .top-wrap{
+                    .t-left{
+                        [class^=t-left-wrap]{
+                            &.t-left-wrap-copy{
+                            }
+                            .card{
+                                &:after{
+                                    content: "";
+                                    bottom: 0;
+                                    left: 0;
+                                    background-size: cover;
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 120px;
+                                    border-radius: 8px;
+                                    background-image: url(../img/project/vegimix.png);
+                                }
+                                &::before{
+                                    background-color: rgba(155, 204, 74, .6);
+                                }
+                                .ve{
+                                    animation: upDown 2.2s infinite;
+                                    position: absolute;
+                                    width: 280px;
+                                    top: -80px;
+                                    right: -120px;
+                                }
+                                .lime{
+                                    animation: upDown 2.5s infinite;
+                                    position: absolute;
+                                    width: 360px;
+                                    height: auto;
+                                    bottom: -120px;
+                                    left: -200px;
+                                    z-index: 15;
+                                }
+                                .bubble{
+                                    animation: opa 4s infinite;
+                                    position: absolute;
+                                    width: 160px;
+                                    top: -10px;
+                                    left: -53px;
+                                    z-index: 15;
+                                }
+                                .card-wrap{
+                                    position: absolute;
+                                    .blur-wrap{
+                                        .blur-one{
+                                            background: linear-gradient(149deg, rgba(155, 204, 74,1) 40%, rgb(96, 141, 23) 100%);
+                                            filter: blur(4px);
+                                        }
+                                        h2{
+                                            color: #1B4A05;
+                                        }
+                                    }
+                                    h4{
+                                        color: #757C72;
+                                    }
+                                    a{
+                                        z-index: 16;
+                                        background: linear-gradient(149deg, rgba(155, 204, 74,1) 20%, rgba(96, 141, 23,1) 100%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .t-right{
+                        h1{
+                        }
+                        h5{
+                        }
+                        p{
+                        }
+                        .pop-btn{
+                            width: 100%;
+                            padding: 20px 50px 0 0;
+                            @include flex(flex-start){}
+                            .val-btn{
+                                background: linear-gradient(149deg, rgba(155, 204, 74,1) 20%, rgba(96, 141, 23,1) 100%);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+    
+    
+    
+            &#bonescatch{
+                .top-wrap{
+                    .t-left{
+                        [class^=t-left-wrap]{
+                            &.t-left-wrap-copy{
+                            }
+                            .card{
+                                .bs-logo{
+                                    position: absolute;
+                                    width: 125%;
+                                    height: auto;
+                                    top: -40px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    z-index: 8;
+                                    animation: bs0 1.5s step-end infinite;
+                                }
+                                .draw-btn{
+                                    position: absolute;
+                                    width: 80%;
+                                    height: auto;
+                                    bottom: -60px;
+                                    left: -10px;
+                                    transform: translateX(-50%);
+                                    z-index: 8;
+                                    animation: bs1 1.4s step-end infinite;
+                                }
+                                .color-black{
+                                    position: absolute;
+                                    width: 100%;
+                                    height: auto;
+                                    bottom: -50px;
+                                    right: -110px;
+                                    z-index: 8;
+                                    animation: bs2 1.6s step-end infinite;
+                                }
+                                &:after{
+                                    content: "";
+                                    top: 0;
+                                    left: 0;
+                                    background-size: cover;
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 70%;
+                                    border-radius: 8px;
+                                    background-image: url(../img/project/bscat.png);
+                                }
+                                &::before{
+                                    background-color: rgba(112, 83, 44, 0.6);
+                                }
+                                .card-wrap{
+                                    position: absolute;
+                                    .blur-wrap{
+                                        .blur-one{
+                                            z-index: 8;
+                                            background: linear-gradient(149deg, rgb(90, 67, 40) 40%, rgb(182, 153, 121) 100%);
+                                            filter: blur(4px);
+                                        }
+                                        h2{
+                                            color: #281704;
+                                        }
+                                    }
+                                    h4{
+                                        color: #757C72;
+                                    }
+                                    a{
+                                        z-index: 16;
+                                        background: linear-gradient(149deg, rgba(149, 109, 63,1) 20%, rgba(98, 75, 49,1) 100%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .t-right{
+                        h1{
+                        }
+                        h5{
+                        }
+                        p{
+                        }
+                        .pop-btn{
+                            width: 100%;
+                            padding: 15px 50px 0 0;
+                            @include flex(flex-start){}
+                            .val-btn{
+                                background: linear-gradient(149deg, rgba(149, 109, 63,1) 20%, rgba(98, 75, 49,1) 100%);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+    
+    
+    
+    
+            &#tahl04{
+                .top-wrap{
+                    .t-left{
+                        [class^=t-left-wrap]{
+                            &.t-left-wrap-copy{
+                            }
+                            .card{
+                                &::before{
+                                    background-color: rgba(94, 133, 235, .6);
+                                }
+                                .tahl-head{
+                                    animation: head 2.5s infinite;
+                                    position: absolute;
+                                    width: 250px;
+                                    height: auto;
+                                    top: -60px;
+                                    left: -135px;
+                                    z-index: 15;
+                                }
+                                .tahl-text{
+                                    position: absolute;
+                                    width: 180px;
+                                    height: auto;
+                                    bottom: -40px;
+                                    left: -80px;
+                                    z-index: 15;
+                                }
+                                .can-img{
+                                    animation: blurcan 2.8s infinite;
+                                    position: absolute;
+                                    width: 180px;
+                                    height: auto;
+                                    bottom: -38px;
+                                    right: -90px;
+                                    z-index: 15;
+                                }
+                                .card-wrap{
+                                    .blur-wrap{
+                                        .blur-one{
+                                            background: linear-gradient(149deg, rgba(94, 133, 235, 1) 40%, rgba(41, 73, 157, 1) 100%);
+                                            filter: blur(4px);
+                                        }
+                                        h2{
+                                            color: #050D56;
+                                        }
+                                    }
+                                    h4{
+                                        color: #73727C;
+                                    }
+                                    a{
+                                        background: linear-gradient(149deg, rgba(94, 133, 235, 1) 20%, rgba(41, 73, 157, 1) 100%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .t-right{
+                        h1{
+                        }
+                        h5{
+                        }
+                        p{
+                        }
+                        .pop-btn{
+                            width: 100%;
+                            padding: 15px 50px 0 0;
+                            @include flex(flex-start){}
+                            .val-btn{
+                                background: linear-gradient(149deg, rgba(94, 133, 235, 1) 20%, rgba(41, 73, 157, 1) 100%);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
+        
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    #project{
+        section{
+            .top-wrap{
+                @include flex( center,space-between){
+                // flex-wrap: wrap;
+                flex-direction: column-reverse;
+            }
+                .t-left{
+                    width: 100%;
+                    height: 50%;
+                    [class^=t-left-wrap]{
+                        .card{
+                            position: relative;
+                            margin-bottom: 40px;
+                            width: 200px;
+                            height: 300px;
+                            border-radius: 8px;
+                            &::before{
+                                content: "";
+                                width: 100px;
+                                height: 100px;
+                                left: -50px;
+                                top: 15%;
+                                border-radius: 50%;
+                                filter: blur(20px);
+                                z-index: -1;
+                                // background-color: rgba(100, 184, 86, .6);
+                            }
+                            
+                            &:hover:before{
+                                left: -50px;
+                                top: 15%;
+                                width: 150px;
+                                height: 150px;
+                                filter: blur(32px);
+                            }
+                            &:hover a{
+                                transition: .3s;
+                                transform: scale(1.1);
+                                box-shadow: 0 0 10px rgba(0,0,0,.6);
+                            }
+                            .card-wrap{
+                                width: 100%;
+                                height: 100%;
+                                padding: 45px 0 60px;
+                                @include flex(){
+                                    flex-direction: column;
+                                }
+                                .blur-wrap{
+                                    padding-top: 10px;
+                                    width: 100%;
+                                    position: relative;
+                                    @include flex(center, center){}
+                                    .blur-one{
+                                        width: 80px;
+                                        height: 80px;
+                                        border-radius: 50%;
+                                        // background: linear-gradient(149deg, rgba(100,184,86,1) 40%, rgba(42,130,28,1) 100%);
+                                        filter: blur(4px);
+                                    }
+                                    h2{
+                                        z-index: 10;
+                                        position: absolute;
+                                        font-size: 22px;
+                                    }
+                                }
+                                h4{
+                                    z-index: 10;
+                                    font-size: 14px;
+                                    padding-top: 10px;
+                                    margin-bottom: 10px;
+                                }
+                                a{
+                                    transition: .3s;
+                                    z-index: 10;
+                                    @include flex(center){}
+                                    color: #fff;
+                                    border-radius: 4px;
+                                    padding: 7px;
+                                    margin-bottom: 20px;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .t-right{
+                    @include flex(flex-start, center){
+                        // flex-direction: row;
+                    }
+                    width: 100%;
+                    height: calc(50% - 100px);
+                    // height: 430px;
+                    padding: 0 0 0 10px;
+                    .first-wrap{
+                        h1{
+                            font-size: 26px;
+                            color: #ddd;
+                        }
+                        h5{
+                            font-size: 17px;
+                            padding: 10px 0 5px;
+                        }
+                        p{
+                            font-weight: 0;
+                            font-size: 0;
+                            line-height: 0;
+                            color: rgb(173, 173, 173);
+                        }
+                    }
+                    .second-wrap{
+                        width: 100%;
+                        padding: 0 10px 0;
+                        @include flex(center, center){
+
+                        }
+                        h6{
+                            padding: 0;
+                            font-size: 0;
+                            line-height: 0;
+                            color: rgb(223, 223, 223);
+                        }
+                        nav{
+                            width: 100%;
+                            height: auto;
+                            @include flex(center, center){
+                                flex-direction: column;
+                                flex-wrap: wrap;
+                            }
+                            span{
+                                color: #555;
+                                padding-bottom: 0;
+                                font-size: 0;
+                                &:first-child{
+                                    font-size: 0;
+                                    color: #999;
+                                }
+                            }
+                        }
+                    }
+                    .pop-btn{
+                        width: 100%;
+                        height: 40px;
+                        padding: 0 0 0 0;
+                        margin-top: 0;
+                        margin: 0;
+                        @include flex( space-between,center){
+                            // flex-direction: row;
+                        }
+                        .val-btn{
+                            width: 40%;
+                            &:first-child{
+                                margin-right: 0px;
+                            }
+                            // margin-right: 10px;
+                            margin-right: 0;
+                            padding: 4px 3px;
+                            border-radius: 4px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .dark-box{
+                    // display: none;
+                }
+            }
+    
+    
+    
+    
+            &#wis{
+                .top-wrap{
+                    .t-left{
+                        [class^=t-left-wrap]{
+                            &.t-left-wrap-copy{
+                            }
+                            .card{
+                                
+                                &::before{
+                                    background-color: rgba(100, 184, 86, .6);
+                                }
+                                &::after{
+                                    content: "";
+                                    bottom: 0;
+                                    left: 0;
+                                    background-size: cover;
+                                    position: absolute;
+                                    width: 100%;
+                                    border-radius: 8px;
+                                    background-image: url(../img/project/wisbg.png);
+                                    
+                                }
+                                .pul{
+                                    top: -40px;
+                                    left: 0;
+                                    position: absolute;
+                                    width: calc(100% + 7px);
+                                    // height: 200px;
+                                }
+                                .ball-shadow{
+                                    position: absolute;
+                                    animation: ballShadow3 1s linear infinite;
+                                    top: -30px;
+                                    left: -50px;
+                                    width: 70px;
+                                    height: 70px;
+                                    background-color: rgba(65, 62, 62, .6);
+                                    filter: blur(6px);
+                                    border-radius: 50%;
+                                    z-index: 6;
+                                }
+                                .ball{
+                                    top: -30px;
+                                    left: -50px;
+                                    z-index: 7;
+                                    animation: ballBounce3 1s linear infinite;
+                                    position: absolute;
+                                    width: 100px;
+                                }
+                                .sin{
+                                    animation: sin 4s infinite;
+                                    position: absolute;
+                                    bottom: -70px;
+                                    right: -100px;
+                                    width: 240px;
+                                    z-index: 10;
+                                }
+                                .wisline{
+                                    position: absolute;
+                                    width: 100%;
+                                    top: 45%;
+                                    left: 0;
+                                    opacity: .5;
+                                }
+                                .card-wrap{
+                                    .blur-wrap{
+                                        .blur-one{
+                                            background: linear-gradient(149deg, rgba(100,184,86,1) 40%, rgba(42,130,28,1) 100%);
+                                            filter: blur(4px);
+                                        }
+                                        h2{
+                                            color: #084D03;
+                                        }
+                                    }
+                                    h4{
+                                        color: #737C72;
+                                    }
+                                    a{
+                                        background: linear-gradient(149deg, rgba(100,184,86,1) 20%, rgba(42,130,28,1) 100%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .t-right{
+                        h1{
+                        }
+                        h5{
+                        }
+                        p{
+                        }
+                        .pop-btn{
+                            width: 100%;
+                            padding: 0;
+                            margin: 10px 0 0;
+                            @include flex(space-around){}
+                            .val-btn{
+                                background: linear-gradient(149deg, rgba(100,184,86,1) 20%, rgba(42,130,28,1) 100%);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+    
+    
+    
+    
+            &#mymaple{
+                .top-wrap{
+                    .t-left{
+                        [class^=t-left-wrap]{
+                            &.t-left-wrap-copy{
+                                .ch1{
+                                    z-index: 10;
+                                    position: absolute;
+                                    background-image: url(../img/project/mych.png);
+                                    background-size: cover;
+                                    animation:none;
+                                    width: 180px;
+                                    height: 250px;
+                                    right: -100px;
+                                    bottom: -40px;
+                                }
+                            }
+                            .card{
+                                &::before{
+                                    background-color: rgba(199, 136, 228, .6);
+                                }
+                                .ch1{
+                                    z-index: 10;
+                                    animation: eyes 4s step-start infinite;
+                                    position: absolute;
+                                    background-image: url(../img/project/mych.png);
+                                    background-size: cover;
+                                    width: 180px;
+                                    height: 250px;
+                                    right: -100px;
+                                    bottom: -40px;
+                                }
+                                &::after{
+                                    content: "";
+                                    bottom: 0;
+                                    left: 0;
+                                    background-size: cover;
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 50px;
+                                    border-radius: 0 0 8px 8px;
+                                    background-image: url(../img/project/underbar.png);
+                                    
+                                }
+                                .topbar{
+                                    position: absolute;
+                                    width: 100%;
+                                    top: 0;
+                                    left: 0;
+                                    height: 23px;
+                                    border-radius: 8px 8px 0 0;
+                                    // background-size: cover;
+                                }
+                                .window{
+                                    animation: upDown 3s step-start infinite;
+                                    width: 200px;
+                                    position: absolute;
+                                    top: -55px;
+                                    left: -60px;
+                                    z-index: 10;
+                                }
+                                .card-wrap{
+                                    .blur-wrap{
+                                        .blur-one{
+                                            background: linear-gradient(149deg, rgba(199, 136, 228,1) 40%, rgba(187, 84, 189,1) 100%);
+                                            filter: blur(4px);
+                                        }
+                                        h2{
+                                            color: #4F0C66;
+                                        }
+                                    }
+                                    h4{
+                                        color: #7B727C;
+                                    }
+                                    a{
+                                        background: linear-gradient(149deg, rgba(199, 136, 228,1) 20%, rgba(187, 84, 189,1) 100%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .t-right{
+                        h1{
+                        }
+                        h5{
+                        }
+                        p{
+                        }
+                        .pop-btn{
+                            width: 100%;
+                            padding: 0;
+                            margin: 10px 0 0;
+                            @include flex(space-around){}
+                            .val-btn{
+                                background: linear-gradient(149deg, rgba(199, 136, 228,1) 20%, rgba(187, 84, 189,1) 100%);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+    
+    
+    
+    
+            &#cheflee{
+                .top-wrap{
+                    .t-left{
+                        [class^=t-left-wrap]{
+                            &.t-left-wrap-copy{
+                            }
+                            .card{
+                                &:after{
+                                    content: "";
+                                    bottom: 0;
+                                    left: 0;
+                                    background-size: cover;
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 120px;
+                                    border-radius: 8px;
+                                    background-image: url(../img/project/vegimix.png);
+                                }
+                                &::before{
+                                    background-color: rgba(155, 204, 74, .6);
+                                }
+                                .ve{
+                                    animation: upDown 2.2s infinite;
+                                    position: absolute;
+                                    width: 230px;
+                                    top: -80px;
+                                    right: -120px;
+                                }
+                                .lime{
+                                    animation: upDown 2.5s infinite;
+                                    position: absolute;
+                                    width: 320px;
+                                    height: auto;
+                                    bottom: -120px;
+                                    left: -200px;
+                                    z-index: 15;
+                                }
+                                .bubble{
+                                    animation: opa 4s infinite;
+                                    position: absolute;
+                                    width: 160px;
+                                    top: -10px;
+                                    left: -53px;
+                                    z-index: 15;
+                                }
+                                .card-wrap{
+                                    position: absolute;
+                                    .blur-wrap{
+                                        .blur-one{
+                                            background: linear-gradient(149deg, rgba(155, 204, 74,1) 40%, rgb(96, 141, 23) 100%);
+                                            filter: blur(4px);
+                                        }
+                                        h2{
+                                            color: #1B4A05;
+                                        }
+                                    }
+                                    h4{
+                                        color: #757C72;
+                                    }
+                                    a{
+                                        z-index: 16;
+                                        background: linear-gradient(149deg, rgba(155, 204, 74,1) 20%, rgba(96, 141, 23,1) 100%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .t-right{
+                        h1{
+                        }
+                        h5{
+                        }
+                        p{
+                        }
+                        .pop-btn{
+                            width: 100%;
+                            padding: 0;
+                            margin: 10px 0 0;
+                            @include flex(space-around){}
+                            .val-btn{
+                                background: linear-gradient(149deg, rgba(155, 204, 74,1) 20%, rgba(96, 141, 23,1) 100%);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+    
+    
+    
+            &#bonescatch{
+                .top-wrap{
+                    .t-left{
+                        [class^=t-left-wrap]{
+                            &.t-left-wrap-copy{
+                            }
+                            .card{
+                                .bs-logo{
+                                    position: absolute;
+                                    width: 125%;
+                                    height: auto;
+                                    top: -40px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    z-index: 8;
+                                    animation: bs0 1.5s step-end infinite;
+                                }
+                                .draw-btn{
+                                    position: absolute;
+                                    width: 80%;
+                                    height: auto;
+                                    bottom: -60px;
+                                    left: -10px;
+                                    transform: translateX(-50%);
+                                    z-index: 8;
+                                    animation: bs1 1.4s step-end infinite;
+                                }
+                                .color-black{
+                                    position: absolute;
+                                    width: 100%;
+                                    height: auto;
+                                    bottom: -50px;
+                                    right: -110px;
+                                    z-index: 8;
+                                    animation: bs2 1.6s step-end infinite;
+                                }
+                                &:after{
+                                    content: "";
+                                    top: 0;
+                                    left: 0;
+                                    background-size: cover;
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 70%;
+                                    border-radius: 8px;
+                                    background-image: url(../img/project/bscat.png);
+                                }
+                                &::before{
+                                    background-color: rgba(112, 83, 44, 0.6);
+                                }
+                                .card-wrap{
+                                    position: absolute;
+                                    .blur-wrap{
+                                        .blur-one{
+                                            z-index: 8;
+                                            background: linear-gradient(149deg, rgb(90, 67, 40) 40%, rgb(182, 153, 121) 100%);
+                                            filter: blur(4px);
+                                        }
+                                        h2{
+                                            color: #281704;
+                                        }
+                                    }
+                                    h4{
+                                        color: #757C72;
+                                    }
+                                    a{
+                                        z-index: 16;
+                                        background: linear-gradient(149deg, rgba(149, 109, 63,1) 20%, rgba(98, 75, 49,1) 100%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .t-right{
+                        h1{
+                        }
+                        h5{
+                        }
+                        p{
+                        }
+                        .pop-btn{
+                            width: 100%;
+                            padding: 0;
+                            margin: 10px 0 0;
+                            @include flex(space-around){}
+                            .val-btn{
+                                background: linear-gradient(149deg, rgba(149, 109, 63,1) 20%, rgba(98, 75, 49,1) 100%);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+    
+    
+    
+    
+            &#tahl04{
+                .top-wrap{
+                    .t-left{
+                        [class^=t-left-wrap]{
+                            &.t-left-wrap-copy{
+                            }
+                            .card{
+                                &::before{
+                                    background-color: rgba(94, 133, 235, .6);
+                                }
+                                .tahl-head{
+                                    animation: head 2.5s infinite;
+                                    position: absolute;
+                                    width: 250px;
+                                    height: auto;
+                                    top: -60px;
+                                    left: -135px;
+                                    z-index: 15;
+                                }
+                                .tahl-text{
+                                    position: absolute;
+                                    width: 180px;
+                                    height: auto;
+                                    bottom: -40px;
+                                    left: -80px;
+                                    z-index: 15;
+                                }
+                                .can-img{
+                                    animation: blurcan 2.8s infinite;
+                                    position: absolute;
+                                    width: 180px;
+                                    height: auto;
+                                    bottom: -38px;
+                                    right: -90px;
+                                    z-index: 15;
+                                }
+                                .card-wrap{
+                                    .blur-wrap{
+                                        .blur-one{
+                                            background: linear-gradient(149deg, rgba(94, 133, 235, 1) 40%, rgba(41, 73, 157, 1) 100%);
+                                            filter: blur(4px);
+                                        }
+                                        h2{
+                                            color: #050D56;
+                                        }
+                                    }
+                                    h4{
+                                        color: #73727C;
+                                    }
+                                    a{
+                                        background: linear-gradient(149deg, rgba(94, 133, 235, 1) 20%, rgba(41, 73, 157, 1) 100%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .t-right{
+                        h1{
+                        }
+                        h5{
+                        }
+                        p{
+                        }
+                        .pop-btn{
+                            width: 100%;
+                            padding: 0;
+                            margin: 10px 0 0;
+                            @include flex(space-around){}
+                            .val-btn{
+                                background: linear-gradient(149deg, rgba(94, 133, 235, 1) 20%, rgba(41, 73, 157, 1) 100%);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
+        
+    }
+    
+}

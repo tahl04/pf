@@ -1,0 +1,464 @@
+@mixin flex($a: space-around, $b: center) {
+    display: flex;
+    justify-content: $a;
+    align-items: $b;
+    @content;
+}
+
+::-webkit-scrollbar {
+    display: none;
+
+}
+@keyframes noise {
+    0% {
+        transform: rotateX(0deg);
+    }
+	50%{
+		transform: rotateX(180deg);
+	}
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+
+
+canvas{
+    background-color: #121213;
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+#aboutme{
+    z-index: 101;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    // border: 2px solid #555;
+    overflow: scroll;
+    #about-wrap{
+        // margin-top: 20px;
+        height: 100%;
+        transition: .3s;
+        @include flex(flex-start){
+
+        }
+        [class^=card]{
+            height: 650px;
+            margin: 0 100px;
+            position: relative;
+            padding: 70px 40px 40px;
+            background-color: rgba(10, 10, 11, .78);
+            @include flex(flex-start,flex-start){
+                flex-direction: column;
+            }
+            &::before{
+                content: "";
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                position: absolute;
+                opacity: 0.15;
+                background-image: url(../img/noise.png);
+                animation: noise .2s step-start infinite;
+            }
+            &.card-h{
+                margin-left: 300px;
+                width: 800px;
+                .intro-wrap{
+                    width: 100%;
+                    padding-bottom: 20px;
+                    @include flex(flex-start, flex-end){}
+                    h1{
+                        font-size: 48px;
+                        color: #fff;
+                        padding-bottom: 10px;
+                        margin-right: 5px;
+                    }
+                    img{
+                        width: 200px;
+                    }
+                }
+                .content{
+                    width: 100%;
+                    @include flex(space-between, flex-start){}
+                    .head-title{
+                        padding-bottom: 17px;
+                        h3{
+                            padding-bottom: 10px;
+                            font-size: 20px;
+                            font-weight: normal;
+                            color: #fff;
+                            span{
+                                color: #5E85EB;
+                            }
+                        }
+                        p{
+                            font-size: 14px;
+                            color: #515151;
+                        }
+                    }
+                    .content-left{
+                        width: 50%;
+                        @include flex(space-around, flex-start){
+                            flex-direction: column;
+                        }
+                        .tahl04{
+                            padding-bottom: 17px;
+                            h4{
+                                padding-bottom: 20px;
+                                font-size: 30px;
+                                color: #fff;
+                                span{
+                                    color: #5E85EB;
+                                    font-size: 16px;
+                                }
+                            }
+                            p{
+                                font-size: 14px;
+                                color: #515151;
+                            }
+                        }
+                        .motto{
+
+                        }
+                    }
+                    .content-right{
+                        padding-left: 80px;
+                        width: 50%;
+                        @include flex(space-between, flex-start){
+                            flex-wrap: wrap;
+                        }
+                        .name{
+                            width: 50%;
+                        }
+                        .birth{
+                            width: 50%;
+                        }
+                        .like{
+
+                        }
+                        .hashtag{
+
+                        }
+                    }
+                }
+            }
+            &.card-d{
+                @include flex(flex-start ,center){
+                    flex-direction: column;
+                }
+                width: 400px;
+                h2{
+                    font-size: 30px;
+                    color: #5E85EB;
+                    font-weight: normal;
+                    span{
+                        font-size: 35px;
+                        font-weight: bold;
+
+                    }
+                }
+            }
+            &.card-s{
+                @include flex(flex-start ,center){
+                    flex-direction: column;
+                }
+                width: 400px;
+                h2{
+                    font-size: 30px;
+                    color: #5E85EB;
+                    font-weight: normal;
+                    span{
+                        font-size: 35px;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .well{
+                padding-top: 40px;
+                @include flex(flex-start, flex-start){
+                    flex-direction: column;
+                }
+                .well-wrap{
+                    padding-bottom: 20px;
+                    position: relative;
+                    display: inline-block;
+                    text-decoration: none;
+                    overflow: hidden;
+                    &:hover{
+                        .well__mask{
+                            transform: translate3d(0, 0, 0);
+                            
+                            &:after{
+                            transform: translate3d(0, 0, 0);
+                            }
+                        }
+                    }
+                    .well__text,
+                    .well__mask:after{
+                        font-size: 1rem;
+                        line-height: 1.3;
+                    }
+                    
+                    .well__text{
+                        color: #515151;
+                    }
+                    
+                    .well__mask{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        transition: transform .3s ease;
+                        transform: translate3d(-100%, 0, 0);
+                        transform-origin: left;
+                        overflow: hidden;
+                        
+                        &:after{
+                        content: attr(data-text);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        color: #5E85EB;
+                        transition: inherit;
+                        transform: translate3d(100%, 0, 0);
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    #aboutme{
+        z-index: 101;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        // border: 2px solid #555;
+        overflow: scroll;
+        padding-top: 30px;
+        #about-wrap{
+            // margin-top: 20px;
+            height: 100%;
+            width: 300vh;
+            transition: .3s;
+            @include flex(flex-start, center){
+                flex-wrap: nowrap;
+            }
+            [class^=card]{
+                width: 500px;
+                height: 80%;
+                margin: 0 100px;
+                position: relative;
+                padding: 70px 40px 40px;
+                background-color: rgba(10, 10, 11, .78);
+                @include flex(flex-start,flex-start){
+                    flex-direction: column;
+                }
+                &::before{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                    opacity: 0.15;
+                    background-image: url(../img/noise.png);
+                    animation: noise .2s step-start infinite;
+                }
+                &.card-h{
+                    margin-left: 100px;
+                    width: 800px;
+                    .intro-wrap{
+                        width: 100%;
+                        padding-bottom: 10px;
+                        @include flex(flex-start, flex-end){}
+                        h1{
+                            font-size: 32px;
+                            color: #fff;
+                            padding-bottom: 3px;
+                            margin-right: 5px;
+                        }
+                        img{
+                            width: 100px;
+                        }
+                    }
+                    .content{
+                        width: 100%;
+                        @include flex(space-between, flex-start){}
+                        .head-title{
+                            padding-bottom: 7px;
+                            h3{
+                                padding-bottom: 7px;
+                                font-size: 14px;
+                                font-weight: normal;
+                                color: #fff;
+                                span{
+                                    color: #5E85EB;
+                                }
+                            }
+                            p{
+                                padding: 10px 0;
+                                font-size: 12px;
+                                color: #515151;
+                            }
+                        }
+                        .content-left{
+                            width: 50%;
+                            @include flex(space-around, flex-start){
+                                flex-direction: column;
+                            }
+                            .tahl04{
+                                padding-bottom: 7px;
+                                h4{
+                                    padding-bottom: 7px;
+                                    font-size: 14px;
+                                    color: #fff;
+                                    span{
+                                        color: #5E85EB;
+                                        font-size: 14px;
+                                    }
+                                }
+                                p{
+                                    padding: 20px 0;
+                                    font-size: 12px;
+                                    color: #515151;
+                                }
+                            }
+                            .motto{
+    
+                            }
+                        }
+                        .content-right{
+                            padding-left: 80px;
+                            width: 50%;
+                            @include flex(space-between, flex-start){
+                                flex-wrap: wrap;
+                            }
+                            .name{
+                                width: 50%;
+                            }
+                            .birth{
+                                width: 50%;
+                            }
+                            .like{
+    
+                            }
+                            .hashtag{
+    
+                            }
+                        }
+                    }
+                }
+                &.card-d{
+                    @include flex(flex-start ,center){
+                        flex-direction: column;
+                    }
+                    width: 400px;
+                    h2{
+                        font-size: 30px;
+                        color: #5E85EB;
+                        font-weight: normal;
+                        span{
+                            font-size: 35px;
+                            font-weight: bold;
+    
+                        }
+                    }
+                }
+                &.card-s{
+                    @include flex(flex-start ,center){
+                        flex-direction: column;
+                    }
+                    width: 400px;
+                    h2{
+                        font-size: 25px;
+                        color: #5E85EB;
+                        font-weight: normal;
+                        span{
+                            font-size: 30px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .well{
+                    padding-top: 25px;
+                    @include flex(flex-start, flex-start){
+                        flex-direction: column;
+                    }
+                    .well-wrap{
+                        padding-bottom: 10px;
+                        position: relative;
+                        display: inline-block;
+                        text-decoration: none;
+                        overflow: hidden;
+                        &:hover{
+                            .well__mask{
+                                transform: translate3d(0, 0, 0);
+                                
+                                &:after{
+                                transform: translate3d(0, 0, 0);
+                                }
+                            }
+                        }
+                        .well__text,
+                        .well__mask:after{
+                            font-size: 1rem;
+                            line-height: 1.3;
+                        }
+                        
+                        .well__text{
+                            color: #515151;
+                        }
+                        
+                        .well__mask{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            transition: transform .3s ease;
+                            transform: translate3d(-100%, 0, 0);
+                            transform-origin: left;
+                            overflow: hidden;
+                            
+                            &:after{
+                            content: attr(data-text);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            color: #5E85EB;
+                            transition: inherit;
+                            transform: translate3d(100%, 0, 0);
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,185 @@
+@mixin flex($a: space-around, $b: center) {
+    display: flex;
+    justify-content: $a;
+    align-items: $b;
+    @content;
+}
+//main color
+$mC : #5E85EB;
+//base color
+$bC : #121213;
+
+$sC: #24469c;
+
+
+
+body{
+    background-color: $bC;
+}
+
+#skill{
+    margin-top: 150px;
+    width: 100%;
+    overflow: hidden;
+    .skill-wrap{
+        width: 100%;
+        padding-left: calc(7% + 50px);
+        @include flex(justify-content, flex-start){
+            flex-direction: column;
+        }
+        ul{
+            [class^=skill-icon]{
+                position: fixed;
+                height: 60%;
+                top: 50%;
+                right: calc(-100vh + 500px);
+                z-index: 48;
+                transform: translate(50% , -50%);
+                transition: .5s;
+                // opacity: .8;
+            }
+            li{
+                z-index: 52;
+                position: relative;
+                padding-top: 20px;
+                mix-blend-mode: difference;
+                @include flex(flex-start, flex-start){}
+                p{
+                    font-size: 18px;
+                    color: $mC;
+                    padding-right: 20px;
+                    
+                }
+                h2{
+                    font-weight: 900;
+                    font-size: calc(15vw - 50px);
+                    // font-size: 20vw;
+                    line-height: .75;
+                    // color: $mC;
+                    color: transparent;
+                    -webkit-text-stroke: 1px $mC;
+                    transition: .2s;
+                    position: relative;
+                    &:hover{
+                        color: $mC;
+                    }
+                }
+            }
+            &.empty{
+                width: 0;height: 0;
+                overflow: hidden;
+            }
+        }
+    }
+    .btn-box{
+        width: 100%;
+        padding: 100px 0 80px;
+        @include flex(center, center){}
+        .btn-ul{
+            margin: 0 20px;
+            z-index: 55;
+            color: #fff;
+            height: 30px;
+            border-radius: 15px;
+            padding: 0 10px;
+            cursor: pointer;
+            color: #ddd;
+            font-weight: 800;
+            font-size: 13px;
+            font-weight: 500;
+            @include flex(center,center){}
+            transition: .3s;
+            &.active{
+                color: #000;
+                background: linear-gradient(118deg, rgba(104,138,226,1) 0%, rgba(65,78,148,1) 100%);
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    
+    #skill{
+        margin-top: 150px;
+        width: 100%;
+        overflow: hidden;
+        .skill-wrap{
+            width: 100%;
+            padding-left: 20px;
+            @include flex(justify-content, flex-start){
+                flex-direction: column;
+            }
+            ul{
+                [class^=skill-icon]{
+                    position: fixed;
+                    height: 60%;
+                    top: 50%;
+                    right: calc(-100vh - 1000px);
+                    z-index: 48;
+                    transform: translate(50% , -50%);
+                    transition: .5s;
+                    // opacity: .8;
+                }
+                li{
+                    z-index: 52;
+                    position: relative;
+                    padding-top: 20px;
+                    mix-blend-mode: difference;
+                    @include flex(flex-start, flex-start){}
+                    p{
+                        font-size: 18px;
+                        color: $mC;
+                        padding-right: 20px;
+                        
+                    }
+                    h2{
+                        font-weight: 900;
+                        font-size: 40px;
+                        // font-size: 20vw;
+                        line-height: .75;
+                        // color: $mC;
+                        color: transparent;
+                        -webkit-text-stroke: 1px $mC;
+                        transition: .2s;
+                        position: relative;
+                        &:hover{
+                            color: $mC;
+                        }
+                    }
+                }
+                &.empty{
+                    width: 0;height: 0;
+                    overflow: hidden;
+                }
+            }
+        }
+        .btn-box{
+            width: 100%;
+            padding: 100px 0 80px;
+            @include flex(center, center){}
+            .btn-ul{
+                margin: 0 20px;
+                z-index: 55;
+                color: #fff;
+                height: 30px;
+                border-radius: 15px;
+                padding: 0 10px;
+                cursor: pointer;
+                color: #ddd;
+                font-weight: 800;
+                font-size: 13px;
+                font-weight: 500;
+                @include flex(center,center){}
+                transition: .3s;
+                &.active{
+                    color: #000;
+                    background: linear-gradient(118deg, rgba(104,138,226,1) 0%, rgba(65,78,148,1) 100%);
+                }
+            }
+        }
+    }
+
+}
