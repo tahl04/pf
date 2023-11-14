@@ -51,7 +51,7 @@ ol, ul {
   z-index: 50;
   background-image: url(../img/noise.png);
   animation: noise 0.2s step-start infinite;
-  opacity: 0.13;
+  opacity: 0.23;
 }
 
 header {
@@ -120,7 +120,7 @@ footer .footer-wrap .logo-wrap img {
 }
 footer .footer-wrap .logo-wrap p {
   font-size: 12px;
-  color: #4D4949;
+  color: #948989;
 }
 footer .footer-wrap .contact {
   width: 200px;
@@ -153,7 +153,7 @@ footer .footer-wrap .contact nav {
 }
 footer .footer-wrap .contact nav p {
   font-size: 12px;
-  color: #4D4949;
+  color: #7c7777;
 }
 
 @media screen and (max-width: 767px) {
